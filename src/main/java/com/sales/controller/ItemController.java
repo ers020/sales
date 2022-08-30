@@ -40,4 +40,13 @@ public class ItemController {
         final PageRequest pageRequest = PageUtil.createPageRequest(page, size);
         return itemService.getAllPagination(pageRequest, httpResponse);
     }
+
+    @GetMapping(value = "/get-by-id")
+    @ResponseBody
+    public ItemDto getById(
+            final @RequestParam Integer id,
+            final HttpServletResponse httpResponse
+    ) throws Exception {
+        return itemService. getById(id, httpResponse);
+    }
 }

@@ -6,7 +6,6 @@ import java.time.LocalDateTime;
 
 @Data
 public class ItemPurchaseDto {
-
     private Integer purchaseId;
     private Integer itemId;
     private Integer itemNum;
